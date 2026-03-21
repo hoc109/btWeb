@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp mảng</title>
+</head>
+<body>
+    <script>
+    let SoLuong= Number(prompt('Nhap so luong phan tu trong mang:')),x;
+    let ds=new Array(SoLuong);
+    for(i=0;i<SoLuong;i++){
+        ds[i]=prompt("Nhap vao ho ten:"," ");
+    }
+ds.sort((a, b) => a.localeCompare(b, 'vi'));
+//ds.reverse();
+document.write("<h1>Danh sach sau khi sap xep:</h1>");
+for(x in ds){
+    document.write(ds[x]);
+    document.write("<br>");
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng hai số hạng</title>
+</head>
+<body>
+    <h1>Tính tổng hai số hạng:</h1>
+    <h2>Hãy nhập hai số và click vào nút Tính tổng</h2>  
+    <input type="text" id="SoHang1"> +
+    <input type="text" id="SoHang2"> =
+    <input type="text" id="KetQua">
+    <input type="button" value="Tính tổng" onclick="tinhTong()">
+
+    <script>
+        function tinhTong() {
+            let chuoi1 = document.getElementById("SoHang1").value;
+            let chuoi2 = document.getElementById("SoHang2").value;
+            let so1 = parseFloat(chuoi1);
+            let so2 = parseFloat(chuoi2);
+                let tong = so1 + so2;
+                document.getElementById("KetQua").value = tong;
+            }
+    </script>
+</body>
+</html>

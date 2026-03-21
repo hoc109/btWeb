@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tích</title>
+</head>
+<body style="font-family: arial;background-color:lavender">
+    <h1>Bạn hãy nhập vào số lượng và giá:</h1>
+    <label for="SoLuong">Số lượng:</label>
+    <input type="text" id="SoLuong">
+    <label for="DonGia"></label>Đơn giá:</label>
+    <input type="text" id="DonGia" onkeyup="ThanhTien.value=SoLuong.value*DonGia.value;"> <hr>
+    <label for="ThanhTien"></label>Thành tiền:</label>
+    <input type="text" id="ThanhTien" readonly>USD
+</body>
+</html>

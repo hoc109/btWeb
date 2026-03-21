@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="MauNen">Bạn hãy chọn màu nền:</label>
+    <select id="Mau" onchange="DoiMauNen();">
+        <option value="">Chọn màu nền</option>
+        <option value="black">Đen</option>
+        <option value="red">Đỏ</option>
+        <option value="blue">Xanh dương</option>
+        <option value="brown">Nâu</option>
+        <option value="lavender">Xanh nhạt</option>
+    </select>
+    <script>
+        function DoiMauNen() {
+            document.bgColor = Mau.value;
+        }
+    </script>
+</body>
+</html>

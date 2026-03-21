@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nhap vao 1 xau co ca chu va so:
+    <input type="text" id="so1"/>
+    <button onclick="tinh()">Tinh tong cac so</button>
+    <h2 id="kq"></h2>
+    <hr/>
+    Nhap vao 1 day so:
+    <input type="text" id="so2"/>
+    <button onclick="tinh2()">Tinh tong cac so</button>
+    <h2 id="kq2"></h2>
+    <script>
+        function tinh() {
+            const so= document.getElementById('so1').value;
+            const st=so.match(/\d+/g);
+            console.log(st);
+            let sum=0;
+            for(let s of st) {
+                sum+=Number(s);
+            }
+            let kq=document.getElementById('kq');
+            kq.innerHTML='Tong cac so la: '+sum;
+        }
+        function tinh2() {
+            const so= document.getElementById('so2').value;
+            const st=so.match(/\d+/g);
+            console.log(st);
+            let sum=0;
+            for(let s of st) {
+                sum+=Number(s);
+            }
+            let kq2=document.getElementById('kq2');
+            kq2.innerHTML='Tong cac so la: '+sum;
+        }
+        function hien(){
+            let d= new Date();
+            let st=d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
+            alert(st);
+        }
+    </script>
+</body>
+</html>

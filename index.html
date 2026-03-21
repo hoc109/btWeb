@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Lesson</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        form {
+            border: 1px solid #333;
+            padding: 15px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tieu de 1</h1>
+    <h2>Tieu de 2</h2>
+
+    <hr style="height:5px; background-color:blue; border:none;" />
+
+    <ol type="I">
+        <li>Di hoc day du</li>
+        <li>Chu y nghe giang</li>
+        <li>Lam bai day du</li>
+    </ol>
+
+    <h3>Vi du phep tinh</h3>
+    <ul style="list-style-type: square;">
+        <li>1 + 2 = 3</li>
+        <li>2 + 2 = 4</li>
+    </ul>
+
+    <hr/>
+
+    <table>
+        <tr>
+            <th>STT</th>
+            <th>Ma Sinh Vien</th>
+            <th>Ho va Ten</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>B23DVCN058</td>
+            <td>Do Nang Hieu</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>B23DVCN190</td>
+            <td>Do Phu Dat</td>
+        </tr>
+    </table>
+
+    <h4>Thong tin nguoi dung</h4>
+
+    <form>
+        <label>
+            Ten dang nhap:
+            <input type="text" name="tendn">
+        </label>
+        <br><br>
+
+        <label>
+            Mat khau:
+            <input type="password" name="matkhau">
+        </label>
+        <br><br>
+
+        Gioi tinh:
+        <label>
+            <input type="radio" name="gioitinh" value="1"> Nam
+        </label>
+        <label>
+            <input type="radio" name="gioitinh" value="0"> Nu
+        </label>
+        <br><br>
+
+        <label>
+            Ngay sinh:
+            <input type="date" name="ngaysinh">
+        </label>
+        <br><br>
+
+        <label>
+            Nhom:
+            <select name="nhom">
+                <option value="nhom16">Nhom 16</option>
+                <option value="nhom17">Nhom 17</option>
+                <option value="nhom18">Nhom 18</option>
+            </select>
+        </label>
+        <br>
+        So thich:
+        <label>
+            <input type="checkbox" name="sothich" value="Pho Ga"> Pho Ga
+        </label>
+        <label>
+            <input type="checkbox" name="sothich" value="Pho Bo"> Pho Bo
+        </label>
+        <label>
+            <input type="checkbox" name="sothich" value="Bun Bo Hue"> Bun Bo Hue
+        </label>
+        <br><br>
+
+        <input type="reset" value="RESET">
+        <button type="submit">SUBMIT</button>
+    </form>
+    <a href="https://slink.ptit.edu.vn">Chay den slink</a>
+    </br>
+    <a href="https://code.ptit.edu.vn">Chay den code PTIT</a>
+</body>
+</html>

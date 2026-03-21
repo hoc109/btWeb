@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xử lý sự kiện chuột</title>
+</head>
+<body style="font-family: arial;">
+    
+    <input type="button" value="Gửi" onmousemove="hienThiTrangThai('Chuột đang ở trong nút Gửi');" >
+    
+    <input type="text" onmousemove="hienThiTrangThai('Chuột đang ở trong textbox');" placeholder="Nhập dữ liệu"> <br><br>
+    
+    <label>
+        <input type="radio" id="Nam" onmousemove="hienThiTrangThai('Chuột đang ở ô Nam');" >Nam
+    </label>
+    <label>
+        <input type="radio" id="Nữ" onmousemove="hienThiTrangThai('Chuột đang ở ô Nữ');" >Nữ
+    </label>
+    <br><br><br>
+    <script>
+        function hienThiTrangThai(noiDung) {
+            document.getElementById('ThanhTrangThai').innerText = noiDung;
+        }
+    </script>
+</body>
+</html>
