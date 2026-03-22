@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            color: #333;
+        }
+
+        .login-form {
+            width: 350px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .form-group input[type="password"] {
+            background-color: #e8f4ff;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button-group button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-reset {
+            background-color: #5cb85c;
+        }
+
+        .btn-reset:hover {
+            background-color: #4cae4c;
+        }
+
+        .btn-login {
+            background-color: #4285f4;
+
+        }
+
+        .btn-login:hover {
+            background-color: #357ae8;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .text-red {
+            color: #d93025;
+            font-size: 14px;
+        }
+
+        .text-blue {
+            color: #1a0dab;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-form">
+        <div class="form-group">
+            <label for="username">Tên đăng nhập:</label>
+            <input type="text" id="username" placeholder="Nhập tên đăng nhập">
+        </div>
+        <div class="form-group">
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" placeholder="Nhập mật khẩu">
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="btn-reset" id="btnReset">Làm lại</button>
+            <button type="button" class="btn-login" id="btnLogin">Đăng nhập</button>
+        </div>
+
+        <div id="message"></div>
+    </div>
+
+    <script>
+
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const btnReset = document.getElementById('btnReset');
+        const btnLogin = document.getElementById('btnLogin');
+        const messageDiv = document.getElementById('message');
+
+        btnReset.addEventListener('click', function () {
+            usernameInput.value = '';
+            passwordInput.value = '';
+            messageDiv.innerHTML = '';
+            messageDiv.className = ''; 
+        });
+
+        btnLogin.addEventListener('click', function () {
+            const user = usernameInput.value;
+            const pass = passwordInput.value;
+
+            if (user === '') {
+                alert('tên đăng nhập không để trống!');
+                return; // Dừng lại không chạy tiếp
+            }
+
+            if (pass === '') {
+                alert('mật khẩu không để trống!');
+                return; // Dừng lại không chạy tiếp
+            }
+
+            // CÁCH 1: HIỂN THỊ BẰNG ALERT
+            /* if (user === 'anhttv' && pass === '123') {
+                alert('nhập đúng');
+            } else {
+                alert('nhập sai');
+            }
+            */
+
+            //CÁCH 2: VIẾT VÀO DƯỚI FORM
+            if (user === 'anhttv' && pass === '123') {
+                messageDiv.textContent = 'Hello anhttv!'; 
+                messageDiv.className = 'text-blue';
+            } else {
+                messageDiv.textContent = 'Nhập sai';
+                messageDiv.className = 'text-red';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

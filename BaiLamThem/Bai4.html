@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4: Checkbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        input[type="button"] {
+            margin-top: 15px;
+            padding: 8px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        #kemDaChon {
+            color: #d93025;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Bài 4: Checkbox</h3>
+
+    <h4>Các loại kem trong cửa hàng:</h4>
+    <input type="checkbox" value="Kem que" name="kem" />Kem que <br />
+    <input type="checkbox" value="Kem dau" name="kem" />Kem dâu <br />
+    <input type="checkbox" value="Kem bơ" name="kem" />Kem bơ <br />
+    <input type="checkbox" value="Kem vani" name="kem" />Kem vani <br />
+
+    <input type="button" onclick="chonKem();" value="Chọn kem" />
+
+    <h4 id="kemDaChon"></h4>
+
+    <script>
+        function chonKem() {
+            let str = "Những loại kem bạn đã chọn là:<br/>";
+
+            let arr = document.getElementsByName("kem");
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].checked) {
+                    str = str + arr[i].value + "<br/>";
+                }
+            }
+            document.getElementById("kemDaChon").innerHTML = str;
+        }
+    </script>
+
+</body>
+
+</html>
